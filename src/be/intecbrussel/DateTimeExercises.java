@@ -2,6 +2,7 @@ package be.intecbrussel;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
@@ -61,5 +62,23 @@ public class DateTimeExercises {
 
         // of je geboorte jaar in een schrikkeljaar was.
         System.out.println("Was it a leap year? -> " + (birthDate.isLeapYear()? "Yes" : "No"));
+
+        System.out.println("---- Github ----");
+        System.out.println("---- Oefening - 1 ----");
+        // 1. Schrijf een programma om de huidige tijd en datum te krijgen.
+        LocalDateTime huidigeTijdAndDatum = LocalDateTime.now();
+        System.out.println(huidigeTijdAndDatum.format(format));
+
+        System.out.println("---- Oefening - 2 ----");
+        // 2. Schrijf een programma om de tijd en datum te formatteren naar: ma, 22 aug. 2022 14:54:24
+        DateTimeFormatter format1 = DateTimeFormatter.ofPattern("E, dd MMM yyyy HH:mm:ss");
+        LocalDateTime randomDateTime = LocalDateTime.of(2022,8, 22, 14, 54, 24);
+        String formattedDateTime = randomDateTime.format(format1);
+        System.out.println(formattedDateTime);
+
+        System.out.println("---- Oefening - 3 ----");
+        // 3. Schrijf een programma om je leeftijd te berekenen in dagen, maanden en jaren.
+
+        // Niet Duidelijk!
     }
 }
